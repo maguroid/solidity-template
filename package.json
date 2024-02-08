@@ -1,8 +1,9 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "prettier": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
-    "lint": "solhint 'contracts/**/*.sol'"
+    "fmt": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
+    "lint:sol": "solhint 'contracts/**/*.sol'",
+    "slither": "slither ."
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^2.0.0",
