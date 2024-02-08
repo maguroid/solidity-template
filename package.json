@@ -1,6 +1,7 @@
 {
   "name": "hardhat-project",
   "scripts": {
+    "compile": "npx hardhat compile",
     "test": "npx hardhat test",
     "fmt": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
     "lint": "npm run lint:sol",
