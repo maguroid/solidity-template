@@ -25,9 +25,10 @@ jobs:
   analysis: # static code analysis
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      packages: write
       security-events: write
+      # only required for workflows in private repositories
+      contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v2
 
