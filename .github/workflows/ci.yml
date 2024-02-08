@@ -25,6 +25,7 @@ jobs:
   analysis: # static code analysis
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       security-events: write
     steps:
       - uses: actions/checkout@v2
