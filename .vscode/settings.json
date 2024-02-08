@@ -1,4 +1,8 @@
 {
   "editor.formatOnSave": true,
-  "solidity.formatter": "prettier"
+  "solidity.linter": "solhint",
+  "prettier.configPath": ".prettierrc",
+  "[solidity]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

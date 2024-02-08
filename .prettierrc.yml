@@ -1,6 +1,0 @@
-plugins: ["prettier-plugin-solidity"]
-overrides:
-  - files: "*.sol"
-    options:
-      ## write your own options here
-      singleQuote: false
