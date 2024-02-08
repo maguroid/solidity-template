@@ -1,7 +1,3 @@
-echo "start linting..."
-npm run lint
-echo "linting passed!"
-
 echo "start testing..."
 npm run test
 echo "testing passed!"

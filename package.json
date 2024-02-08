@@ -4,14 +4,20 @@
     "fmt": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
     "lint": "npm run lint:sol",
     "lint:sol": "solhint 'contracts/**/*.sol'",
+    "lint:ts": "eslint . --ext .ts",
     "slither": "slither .",
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{sol,js,ts,json,yml,yaml,md}": "prettier --write"
+    "*.{sol,js,ts,json,yml,yaml,md}": "prettier --write",
+    "*.{ts,js}": "eslint --ext .ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "hardhat": "^2.19.5",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.2",
