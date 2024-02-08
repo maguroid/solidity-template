@@ -26,6 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       security-events: write
+      # only required for workflows in private repositories
+      contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v2
 
@@ -38,6 +41,6 @@ jobs:
           slither-args: --filter-paths node_modules # exclude other contracts
 
       - name: Upload SARIF output file # it should also add relevant comments on PR
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.slither.outputs.sarif }}
